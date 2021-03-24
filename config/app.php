@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Streitleak\RadiusCDR\RadiusCDRServiceProvider::class,
+        Streitleak\RadiusWeb\RadiusCDRServiceProvider::class,
         /*
          * Application Service Providers...
          */
