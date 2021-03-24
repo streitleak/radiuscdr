@@ -41,7 +41,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-			"Streitleak\\RadiusWeb\\": "vendor/streitleak/web/src/"
+			"Streitleak\\RadiusWeb\\": "vendor/streitleak/radiusweb/src/"
 			}
     },
     "autoload-dev": {
