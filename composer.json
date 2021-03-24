@@ -3,10 +3,13 @@
     "type": "project",
     "description": "The Laravel Framework. For RadiusCDR",
     "keywords": [
-        "framework",
-        "laravel"
+        "radius",
+        "cdr",
+		"billing"
     ],
-    "license": "MIT",
+	"minimum-stability": "dev",
+	"prefer-stable": true,	
+    "license": "GPL-3.0-or-later",
     "require": {
         "php": "^7.3|^8.0",
         "fideloper/proxy": "^4.4",
