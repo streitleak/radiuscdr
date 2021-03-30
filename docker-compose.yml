@@ -42,13 +42,10 @@ services:
         max-size: "10Mb"
         max-file: "5"
   radius:
-    image: freeradius/freeradius-server:latest
+    build:
+      context: ./
+      dockerfile: radius.dockerfile
     restart: always
-    volumes:
-      - "./client.conf:/etc/raddb/client.conf"
-      - "./dictionary:/etc/raddb/dictionary"
-      - "./queries.conf:/etc/raddb/mods-config/sql/main/mysql/queries.conf"
-      - "./radius-server-docker-entrypoint.sh:/docker-entrypoint.d/radius-server-docker-entrypoint.sh"
     ports:
       - "1812-1813:1812-1813/tcp"
       - "1812-1813:1812-1813/udp"
