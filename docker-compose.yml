@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  web:
+    image: streitleak/radiuscdr
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+    depends_on: 
+      - db
+    networks:
+      - st-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10Mb"
+        max-file: "5"
+  radius:
+    image: freeradius/freeradius-server:latest
+    restart: always
+    volumes:
+      - "./client.conf:/etc/raddb/client.conf"
+      - "./dictionary:/etc/raddb/dictionary"
+      - "./queries.conf:/etc/raddb/mods-config/sql/main/mysql/queries.conf"
+#      - "./radius-server-docker-entrypoint.sh:/docker-entrypoint.sh"
+    ports:
+      - "1812-1813:1812-1813/tcp"
+      - "1812-1813:1812-1813/udp"
+    networks:
+      - st-network
+    depends_on: 
+      - db
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10Mb"
+        max-file: "5"
+  db:
+    image: mariadb:10
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+    command: --init-file /radiuscdr.sql
+    volumes:
+      - "mariadb-data:/var/lib/mysql"
+      - ./radiuscdr.sql:/radiuscdr.sql
+    networks:
+      - st-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10Mb"
+        max-file: "5"      
+volumes:
+  mariadb-data:
+networks:
+  st-network:
