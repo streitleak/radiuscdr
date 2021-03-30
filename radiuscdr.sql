@@ -1,10 +1,12 @@
-CREATE DATABASE env('DB_DATABASE');
-CREATE USER env('DB_USERNAME')@'localhost';
-SET PASSWORD FOR env('DB_USERNAME')@'localhost' = PASSWORD(env('DB_PASSWORD'));
+CREATE DATABASE FreeCDR;
+CREATE USER 'freecdradmin'@'localhost';
+SET PASSWORD FOR 'freecdradmin'@'localhost' = PASSWORD('cdradministrator');
 
+#
 # The server can read any table in SQL
-GRANT ALL ON env('DB_DATABASE').* TO env('DB_USERNAME')@'localhost';
-USE env('DB_DATABASE');
+#
+GRANT ALL PRIVILEGES ON FreeCDR.* TO 'freecdradmin'@'localhost';
+USE FreeCDR;
 
 CREATE TABLE IF NOT EXISTS freecdr (
 radacctid bigint(21) NOT NULL auto_increment,
