@@ -28,6 +28,14 @@ Installion Guide
    php artisan migrate  
 8. Start Services  
    docker-compose up -d  
+9. Check Services  
+   docker-compose ps
+   ![image](https://user-images.githubusercontent.com/996923/113178903-9ef19100-9281-11eb-81b4-225c4475411a.png)
+   PS: if showing restarting, need to restart all services again
+10. Stop Services  
+    docker-compose down
+    all Services will be shutdown and remove. Database data will remain for next up.
+11. 
    
    
    
