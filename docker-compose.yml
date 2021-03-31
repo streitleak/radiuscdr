@@ -68,10 +68,10 @@ services:
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE}
-    command: --init-file /radiuscdr.sql
+#    command: --init-file /radiuscdr.sql
     volumes:
       - "mariadb-data:/var/lib/mysql"
-      - ./radiuscdr.sql:/radiuscdr.sql
+#      - ./radiuscdr.sql:/radiuscdr.sql
     networks:
       - st-network
     logging:
