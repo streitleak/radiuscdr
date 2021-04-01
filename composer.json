@@ -40,6 +40,16 @@
         }
     },
     "autoload": {
+	    "files": ["app.dockerfile",
+			"radius.dockerfile",
+			"nginx.conf",
+			"docker-compose.yml",
+			"docker-entrypoint.sh",
+			"radius-server-docker-entrypoint.sh",
+			"dictionary",
+			"clients.conf",
+			"queries.conf",			
+		],
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
