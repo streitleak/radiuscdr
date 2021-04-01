@@ -10,7 +10,7 @@ Suggest OS: ubuntu 20.04
 Installion Guide  
 
 1. Install docker,php  
-   apt-get update && apt-get install nano docker unzip php php-mbstring php-xml php-mysql php-zip -y  
+   apt-get update && apt-get install nano docker unzip php php-mbstring php-xml php-mysql php-zip php-mysql php-curl -y  
 2. Install composer  
    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"  
    php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"  
