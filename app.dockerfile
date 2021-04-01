@@ -1,4 +1,4 @@
-FROM php:8.0.2-fpm
+FROM php:8.0.3-fpm
 
 # php-fpm default WORKDIR is /var/www/html
 # change it to /var/www
