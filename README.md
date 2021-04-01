@@ -5,22 +5,26 @@ Requirement
    Composer 2.0 up  
    Docker 20.10 up  
 
+Suggest OS: ubuntu 20.04
+
 Installion Guide  
 
-1. Install git, composer and docker on VM.  
-   composer install guide:　https://getcomposer.org/doc/00-intro.md  
-   docker install guide: https://runnable.com/docker/install-docker-on-linux  
-2. create /opt folder  
-   mkdir /opt  
-3. go to /opt folder  
+1. Install docker,php  
+   apt-get update && apt-get install nano docker php -y  
+2. Install composer
+   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"  
+   php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"  
+   php composer-setup.php --install-dir=/bin --filename=composer  
+   php -r "unlink('composer-setup.php');"  
+4. go to /opt folder  
    cd /opt  
-4. clone radiuscdr in /opt folder  
+3. clone radiuscdr in /opt folder  
    composer create-project streitleak/radiuscdr  
-5. go to radiuscdr folder  
+4. go to radiuscdr folder  
    cd radiuscdr  
-6. Edit .env file  
+5. Edit .env file  
    modify Database settings and save  
-8. update project  
+6. update project  
    composer update  
 7. upgrade project  
    php artisan migrate  
