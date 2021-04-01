@@ -25,16 +25,15 @@ Installion Guide
 5. Edit .env file  
    modify Database settings and save  
 6. update project  
-   composer update  
+   composer update 
 7. Start Services  
    docker-compose up -d  
 8. Check Services  
    docker-compose ps
    ![image](https://user-images.githubusercontent.com/996923/113178903-9ef19100-9281-11eb-81b4-225c4475411a.png)
-   PS: if showing restarting, need to restart all services again
-9. Stop Services  
-    docker-compose down
-    all Services will be shutdown and remove. Database data will remain for next up.
+   PS: if showing restarting, that container image need to rebuild. Call Support.
+9. Project Publish  
+   php artisan vendor:publish --all
 10. upgrade project  
    php artisan migrate   
    
