@@ -48,7 +48,7 @@
 			"radius-server-docker-entrypoint.sh",
 			"dictionary",
 			"clients.conf",
-			"queries.conf",			
+			"queries.conf"
 		],
         "psr-4": {
             "App\\": "app/",
