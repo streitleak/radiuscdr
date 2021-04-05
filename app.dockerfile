@@ -8,9 +8,20 @@ RUN apt-get update && apt-get install -y \
     libmcrypt-dev \
     default-mysql-client  \
     nano \    
-	nginx \
+	npm \
+	curl \
+	dirmngr \
+	apt-transport-https \
+	lsb-release \
+	ca-certificates \
     && docker-php-ext-configure pdo_mysql \
     && docker-php-ext-install mysqli pdo pdo_mysql \ 
     && docker-php-ext-enable mysqli pdo pdo_mysql \
     && apt-get upgrade -y \
     && apt-get clean
+
+RUN apt-get install nodejs npm -y
+
+RUN php artisan jetstream:install livewire
+
+RUN npm install -g npm && npm run dev
