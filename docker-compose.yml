@@ -4,6 +4,8 @@ services:
   web:
     image: nginx:latest
     restart: always
+    environment:
+      - TZ="Asia/Taipei"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - ./:/var/www
@@ -34,6 +36,7 @@ services:
       - "DB_USERNAME=${DB_USERNAME}"
       - "DB_PASSWORD=${DB_PASSWORD}"
       - "DB_DATABASE=${DB_DATABASE}"      
+      - TZ="Asia/Taipei"
     networks:
       - st-network
     logging:
@@ -46,6 +49,8 @@ services:
       context: ./
       dockerfile: radius.dockerfile
     restart: always
+    environment:
+      - TZ="Asia/Taipei"    
     ports:
       - "1812-1813:1812-1813/tcp"
       - "1812-1813:1812-1813/udp"
