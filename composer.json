@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "streitleak/radiuscdr",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The Laravel Framework. Radius Web Interface",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
