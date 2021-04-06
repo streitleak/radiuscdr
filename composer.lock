@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41a91f679bbf11185d886d49ed774b2d",
+    "content-hash": "b3337478e91b7bd121602cba15c6e732",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2355,23 +2355,20 @@
         },
         {
             "name": "streitleak/radiusweb",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/streitleak/radiusweb.git",
-                "reference": "8d1c2438a92abf6f543a87be7097b01b199a85b9"
+                "reference": "9f9ae56194a67c6b53931df72a1332ad17ed3591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/streitleak/radiusweb/zipball/8d1c2438a92abf6f543a87be7097b01b199a85b9",
-                "reference": "8d1c2438a92abf6f543a87be7097b01b199a85b9",
+                "url": "https://api.github.com/repos/streitleak/radiusweb/zipball/9f9ae56194a67c6b53931df72a1332ad17ed3591",
+                "reference": "9f9ae56194a67c6b53931df72a1332ad17ed3591",
                 "shasum": ""
             },
             "type": "project",
             "autoload": {
-                "classmap": [
-                    "database/migrations"
-                ],
                 "psr-4": {
                     "Streitleak\\RadiusWeb\\": "src/"
                 }
@@ -2389,9 +2386,9 @@
             "description": "Radius CDR Web Interface",
             "support": {
                 "issues": "https://github.com/streitleak/radiusweb/issues",
-                "source": "https://github.com/streitleak/radiusweb/tree/0.0.5"
+                "source": "https://github.com/streitleak/radiusweb/tree/0.0.6"
             },
-            "time": "2021-03-31T16:29:30+00:00"
+            "time": "2021-04-06T03:47:15+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

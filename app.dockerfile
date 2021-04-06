@@ -14,14 +14,13 @@ RUN apt-get update && apt-get install -y \
 	apt-transport-https \
 	lsb-release \
 	ca-certificates \
+    npm \
     && docker-php-ext-configure pdo_mysql \
     && docker-php-ext-install mysqli pdo pdo_mysql \ 
     && docker-php-ext-enable mysqli pdo pdo_mysql \
     && apt-get upgrade -y \
     && apt-get clean
 
-RUN apt-get install nodejs npm -y
+#RUN apt-get install nodejs npm -y
 
-RUN php artisan jetstream:install livewire
-
-RUN npm install -g npm && npm run dev
+#RUN npm install -g npm && npm run dev
