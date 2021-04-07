@@ -21,6 +21,22 @@ services:
       options:
         max-size: "10Mb"
         max-file: "5"
+  phpMyAdmin:
+    image: phpmyadmin:latest
+    restart: always
+    environment:
+      - "PMA_HOSt=${DB_HOST}"
+    ports:
+      - "9080:80"
+    depends_on: 
+      - db
+    networks:
+      - st-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10Mb"
+        max-file: "5"         
   app:
     build:
       context: ./
@@ -83,7 +99,23 @@ services:
       driver: "json-file"
       options:
         max-size: "10Mb"
-        max-file: "5"      
+        max-file: "5"
+  phpMyAdmin:
+    image: phpmyadmin:latest
+    restart: always
+    environment:
+      - "PMA_HOSt=${DB_HOST}"
+    ports:
+      - "9080:80"
+    depends_on: 
+      - db
+    networks:
+      - st-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10Mb"
+        max-file: "5" 
 volumes:
   mariadb-data:
 networks:

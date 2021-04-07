@@ -22,7 +22,7 @@ p {
     float: left;
     height: 10%;
     width: 100%;
-    background: #FF6633;
+    background: #33CCFF;
     text-align: center;
 }
 
@@ -30,12 +30,12 @@ p {
     float: left;
     height: 5%;
     width: 100%;
-    background: #FFCC33;
+    background: #33CCFF;
 }
 
 #content {
     float: left;
-    background: #FFFFFF;
+    background: #33CCFF;
     width: 90%;
     height: 80%;
 }
@@ -50,9 +50,13 @@ p {
 #footer {
     height: 5%;
     width: 100%;
-    background: #33FF66;
+    background: #33CCFF;
     clear: both;
     text-align: center;
+}
+
+#footer h1 {
+  text-align: center;
 }
 
 table {
@@ -165,4 +169,19 @@ display: none;
 
 .search {
   height: 5%;
+}
+
+#content #loginform {
+  margin: auto;
+}
+
+#loginform table {
+  text-align:center; 
+  margin:0 auto; 
+  width:100px;
+  height:60px;
+}
+
+#loginform table tr,td {
+  text-align:center;
 }
