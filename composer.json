@@ -3,7 +3,7 @@
     "type": "project",
     "description": "The Laravel Framework. Radius Web Interface",
     "keywords": ["framework", "laravel"],
-    "license": "GPL-3.0-or-later",
+    "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
         "fideloper/proxy": "^4.4",
