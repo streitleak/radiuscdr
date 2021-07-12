@@ -1,5 +1,7 @@
 # radiuscdr
-   
+
+[![Latest Stable Version](https://poser.pugx.org/streitleak/radiuscdr/v)](//packagist.org/packages/streitleak/radiuscdr) [![Total Downloads](https://poser.pugx.org/streitleak/radiuscdr/downloads)](//packagist.org/packages/streitleak/radiuscdr) [![Latest Unstable Version](https://poser.pugx.org/streitleak/radiuscdr/v/unstable)](//packagist.org/packages/streitleak/radiuscdr) [![License](https://poser.pugx.org/streitleak/radiuscdr/license)](//packagist.org/packages/streitleak/radiuscdr)
+
 Requirement  
    PHP 7.0.0 up  
    Composer 2.0 up  
